@@ -1,0 +1,159 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f7f9fc, #e8ebf3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+header p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+form input {
+    flex: 1;
+    min-width: calc(33% - 10px);
+    padding: 10px 15px;
+    border: 1px solid #d6dbe1;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+form button {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    max-width: 100px;
+}
+
+form button:hover {
+    background-color: #357ab8;
+}
+
+/* Table Section */
+.table-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: #f8f9fc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background: #4a90e2;
+    color: white;
+    text-transform: uppercase;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #e6e9ef;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f4f7fc;
+}
+
+table tbody tr:hover {
+    background: #eaf3fc;
+}
+
+/* Image Styling */
+table img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Button Styles */
+button.action-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button.edit {
+    background: #ffcc00;
+    color: #333;
+}
+
+button.edit:hover {
+    background: #e6b800;
+}
+
+button.delete {
+    background: #ff4d4d;
+    color: white;
+}
+
+button.delete:hover {
+    background: #e63939;
+}

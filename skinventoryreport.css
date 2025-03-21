@@ -1,0 +1,174 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px; /* Increased width for more emphasis */
+    height: 100vh;
+    background-color: #5b7f56; /* Fresh, bold green */
+    color: white;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); /* Adding subtle shadow */
+    border-right: 4px solid #3c4d38; /* Darker green border for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.sidebar .logo {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;          /* Make the link fill the entire list item */
+    padding: 12px 20px;      /* Match padding with list items */
+    border-radius: 5px;      /* Slight rounding of the edges */
+    transition: background-color 0.3s, padding 0.3s;
+    margin: 5px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: #4a684c; /* Darker shade on hover */
+    padding-left: 30px;        /* Slide-in effect on hover */
+    color: #f1f1f1;
+}
+
+.sidebar ul li a:active {
+    background-color: #3c4d38; /* Highlight for active item */
+}
+
+.sidebar .menu-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #dcdcdc;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Main Content */
+main {
+    margin-left: 270px; /* Adjust for increased sidebar width */
+    padding: 20px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Container for cost report cards */
+.container {
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 2.0rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Flexbox Container for Cards */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+    flex: 1 1 300px;
+    max-width: 300px;
+    height: 200px; /* Fixed height for consistent layout */
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex; /* Use Flexbox for centering */
+    flex-direction: column; /* Column layout for content */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: rgb(137, 137, 137); /* Default background color */
+}
+
+/* Heading */
+.card h2 {
+    font-size: 2.2rem;
+    margin: 0; /* Remove extra margin */
+}
+
+
+/* Specific Background Colors */
+.card.product {
+    background-color: rgb(137, 137, 137);
+}
+
+.card.inventory {
+    background-color: rgb(137, 137, 137);
+}
+
+.card.trans {
+    background-color: rgb(137, 137, 137);
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 90%; /* Cards adjust size for smaller screens */
+        height: auto; /* Adjust height dynamically for smaller screens */
+    }
+}
+
+.card-img {
+    width: 100%;
+    height: 120px; /* Reduced height to fit better */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}

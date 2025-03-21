@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employee Profile</title>
+    <link rel="stylesheet" href="empshiftrequest.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">Dashboard</div>
+        <ul class="menu">
+            <li><a href="#">Production Report</a></li>
+            <li><a href="#">Production Process</a></li>
+            <li><a href="genarate_product_dash.html">Generate Product</a></li>
+            <li><a href="generate-salary.html">View Payment</a></li>
+            <li><a href="material.html">Material Status</a></li>
+            <li><a href="generate-revenue.html">Generate Daily Report</a></li>
+            <li><a href="profile_dash.html">My Profile</a></li>
+            <li><a href="export-order.html">LogOut</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <h2>Create Employee Profile</h2>
+            <form action="CreatePofile.php" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="staf_id">Staff ID</label>
+                    <input type="text" id="staf_id" name="staf_id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nic_number">NIC Number</label>
+                    <input type="text" id="nic_number" name="nic_number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile_number">Mobile Number</label>
+                    <input type="text" id="mobile_number" name="mobile_number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lane_number">Lane Number</label>
+                    <input type="text" id="lane_number" name="lane_number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="saddress">Address</label>
+                    <input type="text" id="saddress" name="saddress" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Upload Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Select Position</label>
+                    <select id="position" name="position" onchange="showRoleFields()" required>
+                        <option value="">Select Position</option>
+                        <option value="Transport Manager">Transport Manager</option>
+                        <option value="Production Manager">Production Manager</option>
+                        <option value="Driver">Driver</option>
+                        <option value="Factory Manager">Factory Manager</option>
+                        <option value="Inventory Manager">Inventory Manager</option>
+                        <option value="Stock Keeper">Stock Keeper</option>
+                        <option value="Supervisor">Supervisor</option>
+                        <option value="Employee">Employee</option>
+                    </select>
+                </div>
+
+                <div id="role-fields-container"></div>
+
+                <button type="submit" class="submit-btn">Save Profile</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+       
+       function showRoleFields() {
+            const position = document.getElementById("position").value;
+            const container = document.getElementById("role-fields-container");
+            container.innerHTML = ''; // Clear previous role-specific fields
+
+            if (position) {
+                const roleFields = getRoleFields(position);
+                container.innerHTML = roleFields;
+            }
+        }
+
+        function getRoleFields(position) {
+            switch (position) {
+                case 'Transport Manager':
+                    return `
+                        <label for="transporter_no">Transporter No</label>
+                        <input type="text" id="transporter_no" name="transporter_no">
+                        <label for="vehicle_no">Vehicle No</label>
+                        <input type="text" id="vehicle_no" name="vehicle_no">
+                        <label for="license_no">License No</label>
+                        <input type="text" id="license_no" name="license_no">`;
+                case 'Production Manager':
+                    return `
+                        <label for="pmNumber">PM Number</label>
+                        <input type="text" id="pmNumber" name="pmNumber">
+                        <label for="pArea">Production Area</label>
+                        <input type="text" id="pArea" name="pArea">
+                        <label for="tsize">Total Size</label>
+                        <input type="text" id="tsize" name="tsize">`;
+                case 'Driver':
+                    return `
+                        <label for="dnumber">Driver Number</label>
+                        <input type="text" id="dnumber" name="dnumber">
+                        <label for="vnumber">Vehicle Number</label>
+                        <input type="text" id="vnumber" name="vnumber">
+                        <label for="lnumber">License Number</label>
+                        <input type="text" id="lnumber" name="lnumber">
+                        <label for="experience">Experience</label>
+                        <input type="text" id="experience" name="experience">`;
+                case 'Factory Manager':
+                    return `
+                        <label for="fm_no">Factory Manager No</label>
+                        <input type="text" id="fm_no" name="fm_no">
+                        <label for="doa">Date of Appointment</label>
+                        <input type="date" id="doa" name="doa">
+                        <label for="skill">Skills</label>
+                        <input type="text" id="skill" name="skill">`;
+                case 'Inventory Manager':
+                    return `
+                        <label for="inv_no">Inventory No</label>
+                        <input type="text" id="inv_no" name="inv_no">
+                        <label for="inv_area">Inventory Area</label>
+                        <input type="text" id="inv_area" name="inv_area">
+                        <label for="inv_size">Inventory Size</label>
+                        <input type="text" id="inv_size" name="inv_size">`;
+                case 'Stock Keeper':
+                    return `
+                        <label for="sknumber">Stock Keeper Number</label>
+                        <input type="text" id="sknumber" name="sknumber">
+                        <label for="edate">Employment Date</label>
+                        <input type="date" id="edate" name="edate">`;
+                case 'Supervisor':
+                    return `
+                        <label for="sup_no">Supervisor No</label>
+                        <input type="text" id="sup_no" name="sup_no">
+                        <label for="sup_area">Supervisor Area</label>
+                        <input type="text" id="sup_area" name="sup_area">`;
+                case 'Employee':
+                    return `
+                        <label for="em_no">Employee Number</label>
+                        <input type="text" id="em_no" name="em_no">
+                        <label for="job_rol">Job Role</label>
+                        <input type="text" id="job_rol" name="job_rol">
+                        <label for="experience">Experience</label>
+                        <input type="text" id="experience" name="experience">`;
+                default:
+                    return '';
+            }
+        }
+    
+    </script>
+</body>
+</html>

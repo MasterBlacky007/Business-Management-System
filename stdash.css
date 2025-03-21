@@ -1,0 +1,206 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5fff5; /* Light background to match the aesthetic */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    background: #a8d5a2; /* Light green background */
+    padding: 20px 0; /* Increase padding to push the nav bar lower */
+    border-bottom: 2px solid #85b887;
+}
+
+header .logo img {
+    height: 50px; /* Adjusted logo size */
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #004000;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons .btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    background: #85b887;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.buttons .btn:hover {
+    background: #f3f5f3;
+    color: #004000;
+}
+
+/* Hero Section Styling */
+.hero {
+    text-align: center;
+    padding: 80px 15px;
+    background: url('images/hero-bg.jpg') center/cover no-repeat; /* Example background */
+    color: black;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .get-started {
+    display: inline-block;
+    padding: 8px 25px;
+    background: #b2b4b2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.hero .get-started:hover {
+    background: #004000;
+}
+
+/* Card Container Styles */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 columns for the entire grid */
+    grid-template-rows: auto auto auto; /* Three rows */
+    grid-template-areas:
+        "owner owner owner owner owner" /* First row: single column for the owner */
+        "factory-manager production-manager inventory-manager transport-manager supervisor" /* Second row: 5 cards */
+        "employee stock-keeper transporter transport-manager supervisor"; /* Third row: 4 cards */
+    gap: 30px; /* Space between cards */
+    width: 100%;
+    max-width: 1200px; /* Limit the container width */
+    padding: 0 20px; /* Padding to avoid cards sticking to the container edges */
+    margin: 0 auto; /* Ensure the container is centered */
+}
+
+/* Card Style */
+.card {
+    width: 100%; /* Ensure cards take up full width of their grid cell */
+    height: 180px; /* Fixed height for cards */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 30px; /* Padding inside the card */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 16px; /* Font size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific Background Colors */
+.card.owner {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.card.factory-manager {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card.production-manager {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.card.inventory-manager {
+    background: linear-gradient(135deg, #34e89e, #0f3443);
+}
+
+.card.transport-manager {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.card.supervisor {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.card.employee {
+    background: linear-gradient(135deg, #34e89e, #0f3443);
+}
+
+.card.stock-keeper {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.card.transporter {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Add margin to container2 to create space between the header and the card container */
+.container2 {
+    margin-top: 30px; /* Adjust the space as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+        justify-items: center; /* Align cards to the center */
+    }
+
+    .card {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Adjust height dynamically */
+    }
+}

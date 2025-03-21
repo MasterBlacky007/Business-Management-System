@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transport Details</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Add Transport Details</h2>
+            <form id="addTransportForm" action="add_transport.php" method="post">
+                <div>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter Location">
+                </div>
+                <div>
+                    <label for="note">Note</label>
+                    <input type="text" id="note" name="note" placeholder="Enter Note">
+                </div>
+                <div>
+                    <label for="cost">Cost</label>
+                    <input type="text" id="cost" name="cost" placeholder="Enter Transport Cost">
+                </div>
+                <div>
+                    <label for="status">Status</label>
+                    <input type="text" id="status" name="status" placeholder="Enter Status">
+                </div>
+                <div>
+                    <label for="type">Type:</label>
+                    <select name="type" id="type">
+                        <option value="">Select Transport Type</option>
+                        <option value="Air transport">Air transport</option>
+                        <option value="Ship">Ship</option>
+                        <option value="Kuriyer">Kuriyer</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="driver_id">Driver ID</label>
+                    <input type="text" id="driver_id" name="driver_id" placeholder="Enter Driver ID">
+                </div>
+
+                <div class="save-button">
+                    <button type="button" onclick="submitForm()">ADD Transport</button>
+                </div>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get form field values
+            const location = document.getElementById("location").value.trim();
+            const note = document.getElementById("note").value.trim();
+            const cost = document.getElementById("cost").value.trim();
+            const status = document.getElementById("status").value.trim();
+            const type = document.getElementById("type").value;
+            const driver = document.getElementById("driver_id").value;
+
+            if (!location) {
+                return "Please enter the location.";
+            }
+
+            if (!note) {
+                return "Please enter a note.";
+            }
+
+            if (!cost) {
+                return "Please enter the transport cost.";
+            }
+
+            if (isNaN(cost) || cost <= 0) {
+                return "Please enter a valid positive number for transport cost.";
+            }
+
+            if (!status) {
+                return "Please enter the status.";
+            }
+
+            if (!type) {
+                return "Please select a transport type.";
+            }
+            if (!driver) {
+                return "Please enter the driver id.";
+            }
+
+            return ""; // No errors
+        }
+
+        function submitForm() {
+            const validationMessage = validateForm();
+            const messageDiv = document.getElementById("message");
+            messageDiv.innerHTML = ""; // Clear previous messages
+
+            if (validationMessage) {
+                messageDiv.innerHTML = `<p style="color:red;">${validationMessage}</p>`;
+                return;
+            }
+
+            const formData = new FormData(document.getElementById("addTransportForm"));
+
+            // AJAX request
+            fetch('add_transport.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                messageDiv.innerHTML = `<p style="color:green;">${data}</p>`;
+                document.getElementById("addTransportForm").reset(); // Reset form after successful submission
+            })
+            .catch(error => {
+                messageDiv.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>

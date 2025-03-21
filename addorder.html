@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Dashboard</title>
+    <link rel="stylesheet" href="addorder.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="lcproduct.html">View Product</a></li>
+            <li><a href="addorder.html">Add Order</a></li>
+            <li><a href="vieworder1.php">View Order</a></li>
+            <!--<li><a href="pay.php">Payment</a></li>-->
+            <li><a href="lcprofile.php">My Profile</a></li>
+            <li><a href="ClDashboard.html">LogOut</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <div class="navbar">
+            <h1>Add Order</h1>
+        </div>
+        <div class="content">
+            <button id="showOrderForm" class="add-order">Add Order +</button>
+            <div id="orderFormContainer" class="order-form-container" style="display: none;">
+                <!-- Order form will be dynamically displayed here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="imorder.js"></script>
+</body>
+</html>

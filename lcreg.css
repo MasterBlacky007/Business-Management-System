@@ -1,0 +1,202 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5fff5; /* Light background to match the aesthetic */
+    color: #333;
+    height: 100%; /* Full viewport height */
+}
+
+/* General Page Styles */
+body {
+    background-color: #f0f0f5;
+}
+
+/* Container to align header content */
+.container1 {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header Styles */
+header {
+    background: #a8d5a2; /* Light green background */
+    padding: 20px 0; /* Increase padding to push the nav bar lower */
+    border-bottom: 2px solid #85b887;
+    width: 100%; /* Full width */
+}
+
+/* Logo Styles */
+header .logo img {
+    height: 50px; /* Adjusted logo size */
+    vertical-align: middle;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #004000;
+}
+
+/* Buttons styles */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons .btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    background: #85b887;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.buttons .btn:hover {
+    background: #f3f5f3;
+    color: #004000;
+}
+
+/* Form Container */
+.container2 {
+    width: 100%;
+    max-width: 450px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px auto; /* Center the form below the header */
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Submit Button */
+button {
+    background-color: #0072ff;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 80px 15px;
+    background: url('images/hero-bg.jpg') center/cover no-repeat; /* Example background */
+    color: black;
+    width: 100%; /* Ensure full width for the hero section */
+}
+
+/* Center the text inside the hero section */
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .get-started {
+    display: inline-block;
+    padding: 8px 25px;
+    background: #b2b4b2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.hero .get-started:hover {
+    background: #004000;
+}

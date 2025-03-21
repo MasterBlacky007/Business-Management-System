@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Transport Cost Report</title>
+    <link rel="stylesheet" href="stylesda.css">
+</head>
+<body>
+    <div class="report-modal">
+        <div class="modal-header">
+            <h2>Create General Transport Cost Report</h2><br>
+            <button class="close-btn">&times;</button>
+        </div><br><br>
+        <form id="transportCostForm" action="submit_transport_cost_report2.php" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="report_title">Report Title *</label>
+                    <input type="text" id="report_title" name="report_title" >
+                </div>
+                <div class="form-group">
+                    <label for="report_date">Report Date *</label>
+                    <input type="date" id="report_date" name="report_date" >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="transport_company">Transport ID *</label>
+                    <input type="text" id="transport_company" name="transport_company" >
+                </div>
+                <div class="form-group">
+                    <label for="route">Route *</label>
+                    <input type="text" id="route" name="route" >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="total_distance">Total Distance (km) *</label>
+                    <input type="number" id="total_distance" name="total_distance" >
+                </div>
+                <div class="form-group">
+                    <label for="fuel_cost">Fuel Cost ($) *</label>
+                    <input type="number" id="fuel_cost" name="fuel_cost" oninput="calculateTotalCost()">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="driver_cost">Driver Cost ($) *</label>
+                    <input type="number" id="driver_cost" name="driver_cost" oninput="calculateTotalCost()">
+                </div>
+                <div class="form-group">
+                    <label for="maintenance_cost">Maintenance Cost ($)</label>
+                    <input type="number" id="maintenance_cost" name="maintenance_cost" oninput="calculateTotalCost()">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="other_costs">Other Costs ($)</label>
+                    <input type="number" id="other_costs" name="other_costs" oninput="calculateTotalCost()">
+                </div>
+            </div>
+
+            <!-- Total Cost Field -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="total_cost">Total Cost ($)</label>
+                    <input type="number" id="total_cost" name="total_cost" readonly>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="observations">Observations</label>
+                <textarea id="observations" name="observations"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Submit Report</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="transport_script2.js"></script>
+
+    <script>
+        // JavaScript function to calculate total cost
+        function calculateTotalCost() {
+            // Get the values of the input fields
+            let fuel_cost = parseFloat(document.getElementById('fuel_cost').value) || 0;
+            let driver_cost = parseFloat(document.getElementById('driver_cost').value) || 0;
+            let maintenance_cost = parseFloat(document.getElementById('maintenance_cost').value) || 0;
+            let other_costs = parseFloat(document.getElementById('other_costs').value) || 0;
+
+            // Calculate the total cost
+            let total_cost = fuel_cost + driver_cost + maintenance_cost + other_costs;
+
+            // Set the total cost value in the 'total_cost' field
+            document.getElementById('total_cost').value = total_cost.toFixed(2);
+        }
+    </script>
+</body>
+</html>

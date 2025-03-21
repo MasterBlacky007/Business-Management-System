@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Dashboard</title>
+    <link rel="stylesheet" href="addorder.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Dashboard</h2>
+            <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="dasboard.html"><i class="fas fa-home"></i><span> Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i><span> Profile</span></a></li>
+            <li><a href="#"><i class="fas fa-shopping-cart"></i><span> Products</span></a></li>
+            <li><a href="cusorder.html"><i class="fas fa-shopping-cart"></i><span> Orders</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-comment-dots"></i><span> Feedback</span></a></li>
+            <li><a href="cuslogin.html"><i class="fas fa-sign-out-alt"></i><span> Logout</span></a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+        <div class="navbar">
+            <h1>Add Order</h1>
+        </div>
+        <div class="content">
+            <button id="showOrderForm" class="add-order">Add Order +</button>
+            <div id="orderFormContainer" class="order-form-container" style="display: none;">
+                <!-- Order form will be dynamically displayed here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="lforder.js"></script>
+</body>
+</html>

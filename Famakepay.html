@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Payment</title>
+    <link rel="stylesheet" href="Fmakepay.css">
+    <script>
+        function fetchAmount() {
+            const oid = document.getElementById('oid').value;
+            if (oid) {
+                fetch(`Famakepay.php?oid=${oid}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('amount').value = data || '';
+                    })
+                    .catch(error => console.error('Error fetching amount:', error));
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <!-- Sidebar content -->
+        <div class="logo">Dashboard</div>
+        <ul class="menu">
+        <li><a href="production-process.html">Production Process</a></li>
+        <li><a href="viewcostreport1.html">Cost Report</a></li>
+        <li><a href="gensalary.php">Generate Salary</a></li>
+        <li><a href="facpayment.html">Supplier Payment</a></li>
+        <li><a href="salarystatus.php">Salary Status</a></li>
+        <li><a href="generate-revenue.html">Generate Revenue</a></li>
+        <li><a href="updatedelivery.php">Update Delivery</a></li>
+        <li><a href="approve-request.html">Approve Request</a></li>
+        <li><a href="attendance.php">Attendance</a></li>
+        <li><a href="stockstatus.html">Stock Status</a></li>
+        <li><a href="performancereport.html">Performance Report</a></li>
+        <li><a href="assign-task.html">Assigning Task</a></li>
+        <li><a href="faimportorder.php">Import Order</a></li>
+        <li><a href="viewfeedback.php">Feedback</a></li>
+        <li><a href="facexportorder.html">Export Order</a></li>
+        <li><a href="export-order.html">My Profile</a></li>
+        <li><a href="Home.html">LogOut</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <h2>Supplier Payment Form</h2>
+            <form action="Famakepay.php" method="POST">
+                <label for="suid">Supplier ID</label>
+                <input type="text" id="suid" name="suid" required>
+                
+                <label for="oid">Order ID</label>
+                <input type="text" id="oid" name="oid" required onblur="fetchAmount()">
+                
+                <label for="pdate">Payment Date</label>
+                <input type="date" id="pdate" name="pdate" required>
+                
+                <label for="currency">Currency</label>
+                <input type="text" id="currency" name="currency" required>
+                
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" readonly required>
+
+                <fieldset>
+                    <legend>Payment Method:</legend>
+                    <label for="credit">Credit</label>
+                    <input type="radio" id="credit" name="pmethod" value="credit" required>
+                    <label for="debit">Debit</label>
+                    <input type="radio" id="debit" name="pmethod" value="debit" required>
+                    <label for="paypal">PayPal</label>
+                    <input type="radio" id="paypal" name="pmethod" value="paypal" required>
+                </fieldset>
+
+                <label for="status">Payment Status</label>
+                <select id="status" name="status" required>
+                    <option value="Pending">Pending</option>
+                    <option value="Active">Active</option>
+                  
+                </select>                
+                <button type="submit">Submit Payment</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

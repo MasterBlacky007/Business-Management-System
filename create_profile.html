@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="Criate.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <form id="profileForm" action="creprofile.php" method="post" enctype="multipart/form-data">
+                <section><h2>Create Your Profile</h2></section><br><br>
+
+                <div>
+                    <label for="staf_id">Staff Number</label>
+                    <input type="text" id="staf_id" name="staf_id" placeholder="First Name">
+                </div>
+
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="First Name">
+                </div>
+                <div>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+                </div>
+                <div>
+                    <label for="nic">NIC Number</label>
+                    <input type="text" id="nic" name="nic" placeholder="Enter NIC Number">
+                </div>
+                <div>
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email ID">
+                </div>
+                <div>
+                    <label for="mobile-number">Phone Number</label>
+                    <input type="text" id="mobile-number" name="mobile_number" placeholder="Enter Phone Number">
+                </div>
+                <div>
+                    <label for="lane-number">Lane Number</label>
+                    <input type="text" id="lane-number" name="lane_number" placeholder="Enter Lane Number">
+                </div>
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dob">Date Of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Age" min="1">
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter Address">
+                </div>
+                <div>
+                    <label for="photo">Upload Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" onchange="previewPhoto()">
+                </div>
+                <h2>Personal Details</h2><br>
+                <div>
+                    <label for="pmnumber">Production Manager Number</label>
+                    <input type="text" id="pmnumber" name="pmnumber" placeholder="Enter Production Manager Number">
+                </div>
+                <div>
+                    <label for="parea">Production Area</label>
+                    <input type="text" id="parea" name="parea" placeholder="Enter Production Area">
+                </div>
+                <div>
+                    <label for="tsize">Team Members Count</label>
+                    <input type="text" id="tsize" name="tsize" placeholder="Enter Team Members Count">
+                </div>
+                
+                <div class="save-button">
+                    <button type="button" onclick="submitForm()">Save Profile</button>
+                </div>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        function previewPhoto() {
+            const fileInput = document.getElementById("photo");
+            const previewDiv = document.getElementById("photo-preview");
+
+            previewDiv.innerHTML = "";
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.style.maxWidth = "300px";
+                    img.style.maxHeight = "300px";
+                    img.style.marginTop = "10px";
+                    previewDiv.appendChild(img);
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+
+        function validateForm() {
+            const form = document.getElementById("profileForm");
+            const fields = [
+                { id: "first-name", name: "First Name" },
+                { id: "last_name", name: "Last Name" },
+                { id: "nic", name: "NIC Number" },
+                { id: "email", name: "Email ID" },
+                { id: "mobile-number", name: "Phone Number" },
+                { id: "gender", name: "Gender" },
+                { id: "dob", name: "Date of Birth" },
+                { id: "age", name: "Age" },
+                { id: "address", name: "Address" },
+                { id: "photo", name: "Photo" },
+                { id: "pmnumber", name: "Production Manager Number" },
+                { id: "parea", name: "Production Area" },
+                { id: "tsize", name: "Team Members Count" }
+            ];
+
+            for (const field of fields) {
+                const input = document.getElementById(field.id);
+                if (!input.value.trim()) {
+                    return `${field.name} is required.`;
+                }
+            }
+            return null;
+        }
+
+        function submitForm() {
+            const error = validateForm();
+            if (error) {
+                document.getElementById("message").textContent = error;
+                document.getElementById("message").style.color = "red";
+            } else {
+                document.getElementById("profileForm").submit();
+            }
+        }
+    </script>
+</body>
+</html>

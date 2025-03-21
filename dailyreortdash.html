@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Manager Dashboard</title>
+    <link rel="stylesheet" href="viewcostreport.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">Dashboard</div>
+        <ul class="menu">
+            <li><a href="reortdash.html">Production Report</a></li>
+            <li><a href="addproduct.php">Generate Product</a></li>
+            <li><a href="index.html">View Product</a></li>
+            <li><a href="genpprocess.php">Production Process</a></li>
+            <li><a href="viewpayPM.php">View Payment</a></li>
+            <li><a href="generate_order.php">Generate Order</a></li>
+            <li><a href="material.html">Material Status</a></li>
+            <li><a href="dailyreortdash.html">Generate Daily Report</a></li>
+            <li><a href="PMprofile.html">My Profile</a></li>
+            <li><a href="StDashboard.html">LogOut</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Select Cost Report Section -->
+            <h2 class="cost-report-heading"></h2>
+            
+            <!-- Card Selection Section -->
+            <div class="card-container">
+                <!-- add acailable transport -->
+                <a href="createdaily.php" class="card product">
+                    <img src="images\productioncost.png" alt="Production" class="card-img">
+
+                    <h2>Generate Daily Report</h2>
+                </a>
+                <!-- update available tanspsport -->
+                <a href="viewdilyreport.php" class="card product">
+                    <img src="images\productioncostreport.png" alt="Production" class="card-img">
+
+                    <h2>View Daily Report</h2>
+                </a>
+                
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

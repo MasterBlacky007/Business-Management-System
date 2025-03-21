@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Operations</title>
+    <link rel="stylesheet" href="viewcostreport.css">
+    <style>
+        /* Adjust image size */
+        .card-img {
+            width: 100%;
+            height: 150px; /* Smaller height for proper display */
+            object-fit: contain; /* Ensure the entire image is visible */
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">Dashboard</div>
+        <ul class="menu">
+            <li><a href="viewoperations.html">View Operations</a></li>
+            <li><a href="ownerexportorder.php">Export Order</a></li>
+            <!--<li><a href="delivery-location.html">Delivery Location</a></li>-->
+            <li><a href="owfinancial.html">Financial Report</a></li>
+            <li><a href="ownerpayment.html">Payment Status</a></li>
+            <li><a href="ownersdetail.php">Supplier Details</a></li>
+            <li><a href="owmarequest.php">View Request</a></li>
+            <li><a href="ownerassigntask.php">Assigning Task</a></li>
+            <li><a href="ownerviewfeedback.php">Staff Performance</a></li>
+            <li><a href="ownerviewfeedback.php">View Feedback</a></li>
+            <!--<li><a href="Home.html">My Profile</a></li>-->
+            <li><a href="StDashboard.html">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Select Cost Report Section -->
+            <h2 class="cost-report-heading">Select Operation</h2>
+            
+            <!-- Card Selection Section -->
+            <div class="card-container">
+                <!-- Production Cost Report -->
+                <a href="Owproduction.php" class="card product">
+                    <img src="images/production.jpeg" alt="Production" class="card-img">
+                    <h2>Production Status</h2>
+                </a>
+                <!-- Inventory Cost Report -->
+                <a href="owrevenu.php" class="card inventory">
+                    <img src="images/revenue.jpeg" alt="Revenue" class="card-img">
+                    <h2>Revenue</h2>
+                </a>
+                <!-- Transport Cost Report -->
+                <a href="owsales.php" class="card trans">
+                    <img src="images/sale.jpeg" alt="Sales" class="card-img">
+                    <h2>Sales</h2>
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

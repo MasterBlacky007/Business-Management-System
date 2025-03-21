@@ -1,0 +1,184 @@
+/*-------main code-----*/
+form{
+    padding: 20px;
+    margin: 20px;
+
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1.head {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead {
+    background-color: #f1f1f1;
+}
+table th, table td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.priority {
+    color: red;
+    font-weight: bold;
+}
+div {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Adds space between text inputs */
+}
+
+/* Buttons */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px; /* Increased width for more emphasis */
+    height: 100vh;
+    background-color: #5b7f56; /* Fresh, bold green */
+    color: white;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); /* Adding subtle shadow */
+    border-right: 4px solid #3c4d38; /* Darker green border for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.sidebar .logo {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;          /* Make the link fill the entire list item */
+    padding: 12px 20px;      /* Match padding with list items */
+    border-radius: 5px;      /* Slight rounding of the edges */
+    transition: background-color 0.3s, padding 0.3s;
+    margin: 5px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: #4a684c; /* Darker shade on hover */
+    padding-left: 30px;        /* Slide-in effect on hover */
+    color: #f1f1f1;
+}
+
+.sidebar ul li a:active {
+    background-color: #3c4d38; /* Highlight for active item */
+}
+
+.sidebar .menu-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #dcdcdc;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+main {
+    margin-left: 270px; /* Adjust for increased sidebar width */
+    padding: 20px;
+}
+
+/* Base Styling for Buttons */
+
+
+/* Confirm Button Styling */
+
+
+/* Center Title */
+main h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 20px; /* Adds space below the title */
+}
+
+/* Base Styling for Buttons */
+.action-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin: 0 5px; /* Reduced space between Confirm and Reject buttons */
+    display: inline-block;
+}
+
+/* Confirm Button Styling */
+.btn-confirm {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #45A049; /* Darker Green on Hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Reject Button Styling */
+.btn-reject {
+    background-color: #F44336; /* Red */
+    color: white;
+}
+
+.btn-reject:hover {
+    background-color: #D32F2F; /* Darker Red on Hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

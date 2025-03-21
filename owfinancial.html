@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="empinvreport.css">
+    <link rel="stylesheet" href="viewcostreport.css">
+    <style>
+        /* Adjust image size */
+        .card-img {
+            width: 100%;
+            height: 150px; /* Keeps the images uniformly sized */
+            object-fit: contain; /* Ensures the full image is visible */
+        }
+        .card-container {
+            display: flex;
+            gap: 20px; /* Space between cards */
+        }
+        .card {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: black;
+            flex: 1; /* Ensures all cards have equal width */
+        }
+        .card h2 {
+            margin-top: 10px;
+        }
+
+       
+        /* Main content area */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .cost-report-heading {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">Dashboard</div>
+        <ul class="menu">
+            <li><a href="ownerexportorder.php">Export Order</a></li>
+            <li><a href="owfinancial.html">Financial Report</a></li>
+            <li><a href="ownerpayment.html">Payment Status</a></li>
+            <li><a href="ownersdetail.php">Supplier Details</a></li>
+            <li><a href="owmarequest.php">View Request</a></li>
+            <li><a href="ownerassigntask.php">Assigning Task</a></li>
+            <li><a href="ownerviewfeedback.php">Staff Performance</a></li>
+            <li><a href="ownerviewfeedback.php">View Feedback</a></li>
+            <li><a href="StDashboard.html">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Select Cost Report Section -->
+            <h2 class="cost-report-heading">Financial Report</h2>
+            
+            <!-- Card Selection Section -->
+            <div class="card-container">
+                <!-- Financial Report -->
+                <a href="owinventory.php" class="card product">
+                    <img src="images/financialreport.webp" alt="Financial Report" class="card-img">
+                    <h2>Financial Report</h2>
+                </a>
+             
+            </div>
+        </div>
+    </main>
+</body>
+</html>

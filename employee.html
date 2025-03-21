@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="cprofile.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <form id="profileForm" action="create_emp.php" method="post" enctype="multipart/form-data">
+                <section><h2>Create Your Profile</h2></section><br><br>
+
+                <div>
+                    <label for="sid">Staff ID</label>
+                    <input type="text" id="sid" name="sid" placeholder="Enter Staff ID" required>
+                </div>
+
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+                </div>
+                <div>
+                    <label for="surname">Last Name</label>
+                    <input type="text" id="surname" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div>
+                    <label for="nic">NIC Number</label>
+                    <input type="text" id="nic" name="nic" placeholder="Enter NIC Number" required>
+                </div>
+                <div>
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Email ID" required>
+                </div>
+                <div>
+                    <label for="mobile_number">Phone Number</label>
+                    <input type="text" id="mobile_number" name="mobile_number" placeholder="Enter Phone Number" required>
+                </div>
+
+                <div>
+                    <label for="lane_number">Lane Number</label>
+                    <input type="text" id="lane_number" name="lane_number" placeholder="Enter Lane Number" required>
+                </div>
+
+                <div>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="dob">Date Of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Age" min="1" required>
+                </div>
+
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter Address" required>
+                </div>
+                <div>
+                    <label for="photo">Choose Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" onchange="previewPhoto()" required>
+                </div>
+                
+
+                <h2>Personal Details</h2><br><br>
+
+                <div>
+                    <label for="em_no">Employee Number</label>
+                    <input type="text" id="em_no" name="em_no" placeholder="Enter Number" required>
+                </div>
+
+                <div>
+                    <label for="job_rol">Job Role</label>
+                    <input type="text" id="job_rol" name="job_rol" required>
+                </div>
+                <div>
+                    <label for="skill">Experience</label>
+                    <input type="text" id="skill" name="skill" required>
+                </div>
+
+                <div class="save-button">
+                    <button type="submit">Save Profile</button>
+                </div>
+            </form>
+            <div id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("profileForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(this);
+            const messageDiv = document.getElementById("message");
+
+            fetch('create_emp.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                messageDiv.innerHTML = `<p style="color:green;">${data}</p>`;
+                this.reset(); // Reset the form on successful submission
+            })
+            .catch(error => {
+                messageDiv.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+            });
+        });
+
+        function previewPhoto() {
+            const file = document.getElementById("photo").files[0];
+            const previewDiv = document.getElementById("photo-preview");
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewDiv.innerHTML = `<img src="${e.target.result}" alt="Photo Preview" style="max-width: 200px; max-height: 200px;">`;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewDiv.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

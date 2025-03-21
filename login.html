@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="ologin.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container1">
+            <div class="logo">
+                <img src="images/i1.png" alt="Logo" class="logo-img">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="FAQs.html">FAQs</a></li>
+                </ul>
+                <div class="buttons">
+                    <a href="RegDashboard.html" class="btn">Register</a>
+                    <a href="StDashboard.html" class="btn">Staff</a>
+                    <a href="ClDashboard.html" class="btn">Client</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phonenumber">Phone Number:</label>
+                <input type="text" id="phonenumber" name="phonenumber" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+                <!-- Display message -->
+                
+            </form>
+        </div>
+    </main>
+</body>
+</html>

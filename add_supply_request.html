@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Add New Order </h2>
+            <form action="add_request.php" method="POST">
+                <div>
+                    <label for="mid">Material ID</label>
+                    <input type="text" id="mid" name="mid" placeholder="Enter Material ID">
+                </div>
+                <div>
+                    <label for="mname">Material Name</label>
+                    <input type="text" id="mname" name="mname" placeholder="Enter Material Name">
+                </div>
+                
+                <div>
+                    <label for="quntity">Required Quntity</label>
+                    <input type="text" id="quntity" name="quntity" placeholder="Enter Required Quntity ">
+                </div>
+                
+                
+                <div>
+                    <label for="status">Status</label>
+                    <input type="text" id="status" name="status" placeholder="Enter Status">
+                </div>
+            <div>
+                <label for="rd">Required Date</label>
+                <input type="date" id="rd" name="rd" placeholder="Enter Date">
+            </div>
+               
+                <div class="save-button">
+                    <button type="submit">Add New Request</button>
+                </div>
+            </form>
+
+            
+        </div>
+    </div>
+</body>
+</html>

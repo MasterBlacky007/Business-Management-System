@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4b0082;
+}
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+}
+.form-section {
+    width: 100%;
+    padding: 20px;
+}
+h2 {
+    
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.save-button {
+    grid-column: span 2;
+    text-align: center;
+}
+button {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #350062;
+}
+.experience-section {
+    margin-top: 20px;
+}
+input[type="text"] ,input[type="date"],input[type="number"]  {
+
+    width: 80%;
+    margin: 5px;
+}
+select{
+    width: 80%;
+}
+input[type="email"] {
+
+    width: 80%;
+    margin: 5px;
+}
+select{
+    width: 80%;
+    margin: 5px;
+    height: 30px;
+}

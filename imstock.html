@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Manager Dashboard</title>
+    <link rel="stylesheet" href="stockstatus.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">Dashboard</div>
+        <ul class="menu">
+            <li><a href="ingenorder.html">Generate Order</a></li>
+            <li><a href="invieworder.php">Import Order</a></li>
+            <li><a href="imstock.html">Stock Status</a></li>
+            <li><a href="Inventory.html">Inventory Report</a></li>
+            <li><a href="Invpaymentstatus.php">Payment Status</a></li>
+            <!--<li><a href="production-process.html">Stock Status</a></li>-->
+            <li><a href="invsdetail.php">Supplier Details</a></li>
+            <li><a href="inviewtask.php">View Task</a></li>
+            <li><a href="IMprofile.html">My Profile</a></li>
+            <li><a href="StDashboard.html">LogOut</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Select Cost Report Section -->
+            <h2 class="cost-report-heading">Select Stock</h2>
+            
+            <!-- Card Selection Section -->
+            <div class="card-container">
+                <!-- Production Cost Report -->
+                <a href="pimstock.php" class="card product">
+                    <img src="images\download (1).jpeg" alt="Production" class="card-img">
+
+                    <h2>Product Stock</h2>
+                </a>
+                <!-- Inventory Cost Report -->
+                <a href="mimstock.php" class="card inventory">
+                    <img src="images\download (4).png" alt="Production" class="card-img">
+
+                    <h2>Product Material Stock</h2>
+                </a>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

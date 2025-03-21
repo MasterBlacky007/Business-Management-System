@@ -1,0 +1,477 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/*-------------------------------------------Main Code ---------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.wrapper
+{
+    height: 100%;
+    width: 100%;
+}
+header
+{
+    height: 115px;
+    width: 100%;
+    background-color: black;
+}
+/*section{
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    background-size: cover;
+    background-position: center;
+}
+ */
+.about {
+    width: 100%;
+    height: 50vh; /* Full viewport height */
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: flex-start; /* Aligns content to the top */
+    padding: 20px;  /*Optional padding */
+    margin-bottom: 0; /* Remove space at the bottom of the About section */
+}
+
+
+.container {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: flex-start; /* Aligns items in the row to the left */
+}
+
+.logo2 {
+    margin-left: 150px; /* Add some space from the left side */
+    margin-top: 100px;
+}
+
+.logo2 img {
+    width: 150px; /* Adjust the size of the image */
+    height: auto;
+}
+
+.detail {
+    width: 100%;
+    padding: 20px; /* Optional padding around the section */
+    background-color: #f4f4f4; /* Optional background color for contrast */
+    border-radius: 8px; /* Optional rounded corners */
+    margin-left: 150px; /* Add some space from the left side */
+    margin-top: 100px;
+}
+
+.detail h3 {
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold font */
+    font-size: 24px; /* Optional font size adjustment */
+    margin-bottom: 15px; /* Optional spacing between h3 and p */
+}
+
+.detail p {
+    font-style: italic; /* Italicized text */
+    font-size: 16px; /* Optional font size adjustment */
+    color: #333; /* Optional color for better readability */
+}
+
+.four-headings {
+    display: flex;
+    justify-content: space-between; /* Distribute evenly */
+    align-items: center; /* Align vertically in the center */
+    width: 100%;
+    background-color: rgb(187, 187, 255);
+    padding: 40px 0;
+    margin-top: -60px;
+
+  
+}
+
+.heading-item {
+    text-align: center;
+   
+    width: 22%; /* Each item will take up about 1/4th of the width */
+    /*background-color: rgb(187, 187, 255);*/
+    padding: 40px; 
+}
+
+.heading-item h2 {
+    font-size: 30px;
+    margin-bottom: 10px; /* Space between h2 and h3 */
+}
+
+.heading-item h3 {
+    font-size: 20px;
+    color: #555;
+}
+
+
+.skills {
+    background-color: #fff;
+    padding: 20px; /* Add padding as needed */
+    width: 100%;
+    height: auto; /* Auto height, removes excessive space */
+    display: block;  /* Ensure content is stacked vertically */
+    text-align: center;
+    margin-top: -10px; /* Reduce the space between About and Skills */
+}
+
+/* Skill Container */
+.skill-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center the content horizontally */
+    justify-content: flex-start; /* Align items from the top */
+}
+
+/* Heading */
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 20px;  /* Space below the heading */
+}
+
+/* Paragraph */
+.skills p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;  /* Space below the paragraph */
+    text-align: center;   /* Ensure text is centered */
+}
+
+/* Skill bars */
+.skill-bar {
+    width: 80%;
+    background-color: #e4e4e4;
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill {
+    height: 30px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.skill span {
+    padding: 0 10px;
+}
+
+.test {
+    background-color: #fff;
+    padding: 20px; /* Add padding as needed */
+    width: 100%;
+    height: auto; /* Auto height, removes excessive space */
+    display: block;  /* Ensure content is stacked vertically */
+    text-align: center;
+    margin-top: -10px; /* Reduce the space between About and Skills */
+}
+
+.testt h2 {
+    font-size: 32px;
+    margin-bottom: 20px;  /* Space below the heading */
+}
+
+/* Paragraph */
+.testt p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;  /* Space below the paragraph */
+    text-align: center;   /* Ensure text is centered */
+}
+
+/* Slideshow section styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 40vh;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 50px; /* Add margin-top to push it down below the previous sections */
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Make the active slide visible */
+.slide.active {
+    display: block;
+}
+
+/* Image styling */
+/* Image styling for circular and smaller size */
+.slide img {
+    width: 150px; /* Adjust width to your desired size */
+    height: 150px; /* Set height equal to width for a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits well inside the circle */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensures the image is a block element */
+}
+
+
+/* Text styling */
+.slide h2, .slide p {
+    color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 5px 0; /* Adjust the margin to remove space between elements */
+    padding: 0; 
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.slide h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.slide p {
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+.slide-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slide-btn {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slide-btn:hover, .slide-btn.active {
+    background-color: #4caf50;
+}
+
+
+
+.logo{
+    float: left;
+    padding-left: 20px;
+}
+.logo img{
+    padding-left: 20px;
+    
+}
+li a
+{
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+    margin-right: 70px;
+    word-spacing: 30px;
+    font-size: 20px;  
+    padding: 25px;
+}
+nav li
+{
+    display: inline-block;
+    line-height: 50px;
+}
+nav ul li a:hover {
+    color: #ff6600;
+}
+footer
+{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    padding: 50px 0;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-box {
+    width: 23%;
+}
+
+.footer-box h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-box ul {
+    list-style-type: none;
+}
+
+.footer-box ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #ff6600;
+}
+
+.company-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-box p {
+    margin-bottom: 20px;
+    color: #999;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff6600;
+}

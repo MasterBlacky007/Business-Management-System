@@ -1,0 +1,76 @@
+/* General table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Table header styles */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table cell styles */
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Make the form inputs look better */
+input[type="text"], input[type="number"], input[type="date"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Form field container */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Align labels and inputs */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Table row hover effect */
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Style for the table when there are no reports */
+td[colspan="9"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+.ss1{
+    height: 20px;
+    width: 100px;
+}

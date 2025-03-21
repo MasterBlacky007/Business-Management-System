@@ -1,0 +1,177 @@
+/*-------main code-----*/
+form{
+    padding: 20px;
+    margin: 20px;
+
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1.head {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead {
+    background-color: #f1f1f1;
+}
+table th, table td {
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.priority {
+    color: red;
+    font-weight: bold;
+}
+div {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Adds space between text inputs */
+}
+
+/* Buttons */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4a2abe; /* Button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+input[type="submit"]:hover {
+    background-color: #3a2095; /* Darker shade on hover */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 270px; /* Increased width for more emphasis */
+    height: 100vh;
+    background-color: #5b7f56; /* Fresh, bold green */
+    color: white;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2); /* Adding subtle shadow */
+    border-right: 4px solid #3c4d38; /* Darker green border for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.sidebar .logo {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;          /* Make the link fill the entire list item */
+    padding: 12px 20px;      /* Match padding with list items */
+    border-radius: 5px;      /* Slight rounding of the edges */
+    transition: background-color 0.3s, padding 0.3s;
+    margin: 5px 0;
+}
+
+.sidebar ul li a:hover {
+    background-color: #4a684c; /* Darker shade on hover */
+    padding-left: 30px;        /* Slide-in effect on hover */
+    color: #f1f1f1;
+}
+
+.sidebar ul li a:active {
+    background-color: #3c4d38; /* Highlight for active item */
+}
+
+.sidebar .menu-heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #dcdcdc;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+main {
+    margin-left: 270px; /* Adjust for increased sidebar width */
+    padding: 20px;
+}
+
+/* Style for the select dropdown */
+select[name="status"] {
+    display: block; /* Ensure it takes up its own line */
+    margin-bottom: 10px; /* Add space below the dropdown */
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark text color */
+    font-size: 16px; /* Font size */
+    padding: 10px; /* Padding for a clean look */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s ease; /* Smooth transition for hover/focus */
+}
+
+/* Hover and focus styles for select */
+select[name="status"]:hover {
+    border-color: #999; /* Darker border on hover */
+}
+select[name="status"]:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Green glow */
+}
+
+/* Style for the update button */
+button[name="update_status"] {
+    display: block; /* Ensure it takes up its own line */
+    margin-top: 10px; /* Add space above the button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Hover effect for button */
+button[name="update_status"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

@@ -1,0 +1,141 @@
+/* General Styling */
+       body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+    }
+
+    /* Profile Container */
+    .profile-container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    /* Search Section */
+    .sea {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    input.sea {
+        padding: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    input.seabut {
+        padding: 10px 15px;
+        margin-left: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    input.seabut:hover {
+        background-color: #45a049;
+    }
+
+    /* Profile Layout */
+    .profile-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* Profile Photo */
+    .profile-photo {
+        flex: 1 1 200px;
+        text-align: center;
+    }
+
+    .profile-photo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form Section */
+    .profile-form {
+        flex: 2 1 500px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    /* Form Buttons */
+    .form-buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    button.btn-cancel {
+        background-color: #f44336;
+        color: white;
+    }
+
+    button.btn-cancel:hover {
+        background-color: #d32f2f;
+    }
+
+    button.btn-save {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    button.btn-save:hover {
+        background-color: #45a049;
+    }
+
+    /* Error Messages */
+    .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }

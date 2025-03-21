@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F6E9E7; /* Pot Pourri */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1b2663; /* Biscay */
+    color: white;
+    transition: 0.3s ease-in-out;
+    position: fixed;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #E52028; /* Alizarin Crimson */
+    font-size: 18px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 12px 20px;
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+}
+
+.sidebar-menu li:hover {
+    background-color: #bb90a9; /* Sea Pink */
+    border-radius: 5px;
+}
+
+/* Collapsible Sidebar */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed .sidebar-header h2 {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-menu li a span {
+    display: none;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    transition: 0.3s ease-in-out;
+}
+
+header h1 {
+    color: #E52028; /* Alizarin Crimson */
+}
+
+/* Responsive Sidebar */
+.main-content.collapsed {
+    margin-left: 60px;
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Ensure it does not overflow */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hide all slides by default */
+.slide {
+    display: none;
+    position: relative;
+}
+
+/* Ensure images fit properly */
+.slide img {
+    width: 100%;
+    height: 550px; /* Adjust to fit your design */
+    object-fit: cover; /* Ensures proper image scaling */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Product details styling */
+.product-details {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.product-details h3, .product-details p {
+    margin: 5px 0;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation Dots */
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #E52028; /* Alizarin Crimson */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .slide img {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .product-details {
+        bottom: 10px;
+        left: 10px;
+        padding: 10px;
+    }
+
+    .product-details h3 {
+        font-size: 16px;
+    }
+
+    .product-details p {
+        font-size: 14px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+
+
+
+/* Main Content */
+main {
+    margin-left: 270px; /* Adjust for increased sidebar width */
+    padding: 20px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-order {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.add-order:hover {
+    background-color: #0056b3;
+}
+
+.order-form-container {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.order-form-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Increased max-width for a wider form */
+    width: 90%;       /* Ensure it takes up more width relative to the screen */
+    margin: 0 auto;
+}
+
+.order-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-form-container form label {
+    font-size: 1.1rem;
+    color: #495057;
+    font-weight: 500;
+}
+
+.order-form-container form input, 
+.order-form-container form button {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 100%; /* Make input and button stretch to the full container width */
+}
+
+.order-form-container form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.order-form-container form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.order-form-container form button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,34 @@
+/* Hide the default file input */
+.input-container input[type="file"] {
+    display: none;
+}
+
+/* Style for the label */
+.input-container label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #f4f7fc;
+    color: #666;
+    font-size: 14px;
+    border: 1px solid #d6dbe1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Label hover effect */
+.input-container label:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* File input changes when a file is selected */
+.input-container input[type="file"]:valid + label::after {
+    content: attr(data-text);
+    margin-left: 10px;
+}
+
+/* Showing the file name after selection */
+.input-container input[type="file"]:not(:empty) + label::after {
+    content: " | " attr(data-text);
+}

@@ -1,0 +1,108 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f7f9fc, #e8ebf3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+header p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Form Section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Row (for aligning labels and inputs on one line) */
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Label Styling */
+form label {
+    width: 150px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Input Styling */
+form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #d6dbe1;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f4f7fc;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between; /* Ensures buttons are aligned on the same line with space between */
+}
+
+/* Button Styling */
+form button {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    max-width: 200px; /* Optional: Set a max width for the submit button */
+}
+
+form button:hover {
+    background-color: #357ab8;
+}
+
+/* Button for Back */
+#productmanage {
+    padding: 10px 15px;
+    background-color: #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#productmanage:hover {
+    background-color: #bbb;
+}

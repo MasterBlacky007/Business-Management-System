@@ -1,0 +1,145 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5fff5; /* Light background to match the aesthetic */
+    color: #333;
+    height: 100%; /* Ensure full-page height */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Allow header and content to stack */
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Header Styling */
+header {
+    width: 100%; /* Full width */
+    background: #a8d5a2; /* Light green background */
+    padding: 20px 0;
+    border-bottom: 2px solid #85b887;
+    text-align: center;
+}
+
+header .logo img {
+    height: 50px; /* Adjusted logo size */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #004000;
+}
+
+/* Center Content */
+.main-content {
+    flex: 1; /* Fills remaining space below header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons .btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    background: #85b887;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.buttons .btn:hover {
+    background: #f3f5f3;
+    color: #004000;
+}
+
+
+/* Flexbox Container for Cards */
+.card-container {
+    display: flex;
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Centers cards horizontally */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Card Style */
+.card {
+    flex: 1; /* Equal size for all cards */
+    max-width: 300px; /* Reduced max-width for smaller boxes */
+    height: 150px; /* Reduced height for smaller boxes */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific Background Colors */
+.card.local {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.card.foreign {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.card.supplier {
+    background: linear-gradient(135deg, #34e89e, #0f3443);
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.container1 {
+    margin-top: 30px; /* Adjust the space as needed */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        justify-content: center;
+    }
+
+    .card {
+        max-width: 80%; /* Cards adjust size for smaller screens */
+        height: auto; /* Adjust height dynamically for smaller screens */
+    }
+}
